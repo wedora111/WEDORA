@@ -79,7 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ZARWI — Digital Wedding Invitations" },
+      { title: "WEDORA — Digital Wedding Invitations" },
       { name: "description", content: "Beautiful interactive digital wedding invitations, personalized for your celebration and ready to share." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

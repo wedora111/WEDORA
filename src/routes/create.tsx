@@ -5,8 +5,8 @@ import { invitationDesigns, getDesign } from "@/data/designs";
 import { countries, normalizePhone } from "@/data/countries";
 import { supabase } from "@/integrations/supabase/client";
 
-const TITLE = "Create Your Invitation — ZARWI";
-const DESC = "Choose a ZARWI design, share your wedding details and receive your personalized invitation preview on WhatsApp.";
+const TITLE = "Create Your Invitation — WEDORA";
+const DESC = "Choose a WEDORA design, share your wedding details and receive your personalized invitation preview on WhatsApp.";
 
 export const Route = createFileRoute("/create")({
   validateSearch: z.object({ design: z.string().optional() }),
@@ -299,7 +299,7 @@ function Confirmation() {
       <p className="eyebrow mt-3">Please keep an eye on WhatsApp</p>
       <div className="mt-12 flex flex-wrap justify-center gap-3">
         <Link to="/collection" className="btn-primary">Explore more designs</Link>
-        <Link to="/" className="btn-ghost">Back to ZARWI</Link>
+        <Link to="/" className="btn-ghost">Back to WEDORA</Link>
       </div>
     </section>
   );

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { invitationDesigns } from "@/data/designs";
 import { DesignCard } from "@/components/DesignCard";
 
-const TITLE = "The ZARWI Collection — Interactive Wedding Invitations";
+const TITLE = "The WEDORA Collection — Interactive Wedding Invitations";
 const DESC = "Browse 21 interactive digital wedding invitation designs. View each live and try your favourite.";
 
 export const Route = createFileRoute("/collection")({
@@ -27,7 +27,7 @@ function Collection() {
 
   return (
     <section className="mx-auto max-w-7xl px-5 py-14 md:px-10 md:py-24">
-      <p className="eyebrow reveal">The ZARWI collection</p>
+      <p className="eyebrow reveal">The WEDORA collection</p>
       <h1 className="reveal mt-4 max-w-3xl text-5xl leading-[1] md:text-7xl">Choose the invitation that feels like your story.</h1>
       <div className="-mx-5 mt-10 flex gap-6 overflow-x-auto border-b border-border px-5 pb-3 md:mx-0 md:px-0">
         {categories.map((c) => (

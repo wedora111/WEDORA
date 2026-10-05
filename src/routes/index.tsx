@@ -5,7 +5,7 @@ import t1 from "@/assets/designs/t1.jpg";
 import t2 from "@/assets/designs/t2.jpg";
 import t3 from "@/assets/designs/t3.jpg";
 
-const TITLE = "ZARWI — Digital Wedding Invitations";
+const TITLE = "WEDORA — Digital Wedding Invitations";
 const DESC = "Beautiful interactive digital wedding invitations, personalized for your celebration and ready to share.";
 
 export const Route = createFileRoute("/")({
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
 });
 
 const steps = [
-  ["01", "Choose", "Explore the ZARWI collection."],
+  ["01", "Choose", "Explore the WEDORA collection."],
   ["02", "Share", "Tell us about your wedding."],
   ["03", "We create", "We personalize your chosen design."],
   ["04", "Share your story", "Receive your invitation link on WhatsApp and share it with your guests."],
@@ -68,7 +68,7 @@ function Home() {
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
-              <p className="eyebrow">The ZARWI collection</p>
+              <p className="eyebrow">The WEDORA collection</p>
               <h2 className="mt-4 text-4xl md:text-6xl">Choose the invitation that feels like your story.</h2>
             </div>
             <Link to="/collection" className="link-line self-start md:self-end">All {invitationDesigns.length} designs</Link>
@@ -103,7 +103,7 @@ function Home() {
 
       {/* Why */}
       <section className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
-        <p className="eyebrow">Why ZARWI</p>
+        <p className="eyebrow">Why WEDORA</p>
         <div className="mt-10 divide-y divide-border border-y border-border">
           {why.map(([t, d]) => (
             <div key={t} className="grid gap-2 py-7 md:grid-cols-12 md:items-baseline">

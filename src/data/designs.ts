@@ -14,7 +14,7 @@ export type InvitationDesign = {
 };
 
 /**
- * The ZARWI showcase collection. To add a design, append an entry.
+ * The WEDORA showcase collection. To add a design, append an entry.
  * Replace `thumbnail` with the real screenshot of each invitation when available.
  */
 export const invitationDesigns: InvitationDesign[] = [
