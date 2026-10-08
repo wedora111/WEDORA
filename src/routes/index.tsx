@@ -37,7 +37,6 @@ const why = [
 ];
 
 function Home() {
-  const featured = invitationDesigns.slice(0, 6);
   return (
     <>
       {/* Hero */}
@@ -74,7 +73,7 @@ function Home() {
             <Link to="/collection" className="link-line self-start md:self-end">All {invitationDesigns.length} designs</Link>
           </div>
           <div className="mt-14 grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-            {featured.map((d, i) => (
+            {invitationDesigns.map((d, i) => (
               <div key={d.id} className={i % 3 === 1 ? "lg:mt-20" : ""}>
                 <DesignCard design={d} tall={i % 2 === 0} />
               </div>

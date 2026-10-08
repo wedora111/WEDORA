@@ -1,16 +1,6 @@
-# Pixel Perfect
+# WEDORA
 
-Implement exactly the screenshot and nothing else
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/b03b0fa8-8c88-4427-af1e-ebc757146aa0).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+Interactive digital wedding invitations with a static collection of 21 designs.
 
 ## Development
 
