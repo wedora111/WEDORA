@@ -66,6 +66,8 @@
 @layer base {
   * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; }
+  fieldset { min-width: 0; }
+  h1, h2, h3, p, dd { overflow-wrap: anywhere; }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -88,6 +90,7 @@
 }
 
 @utility btn-primary {
+  min-height: 44px; max-width: 100%; text-align: center;
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
   padding: 0.95rem 1.6rem; font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase;
   background: var(--color-primary); color: var(--color-primary-foreground);
@@ -97,6 +100,7 @@
 }
 
 @utility btn-ghost {
+  min-height: 44px; max-width: 100%; text-align: center;
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
   padding: 0.95rem 1.6rem; font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase;
   border: 1px solid var(--color-primary); color: var(--color-primary);
@@ -105,6 +109,7 @@
 }
 
 @utility link-line {
+  display: inline-flex; align-items: center; min-height: 44px;
   font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase;
   border-bottom: 1px solid var(--color-gold); padding-bottom: 2px;
   transition: color 0.3s ease;
@@ -112,6 +117,7 @@
 }
 
 @utility field {
+  min-width: 0; max-width: 100%; min-height: 44px;
   width: 100%; background: transparent; border: 0; border-bottom: 1px solid var(--color-input);
   padding: 0.7rem 0; font-size: 1rem; color: var(--color-foreground); outline: none; border-radius: 0;
   transition: border-color 0.3s ease;

@@ -123,19 +123,19 @@ function CreatePage() {
 
       <div className="mt-10 flex gap-1.5" aria-label={`Step ${step + 1} of ${STEPS.length}`}>
         {STEPS.map((s, i) => (
-          <button key={s} type="button" onClick={() => i < step && setStep(i)} className="flex-1 text-left">
+          <button key={s} type="button" onClick={() => i < step && setStep(i)} className="min-h-11 min-w-0 flex-1 text-left">
             <span className={`block h-px transition-colors ${i <= step ? "bg-gold" : "bg-border"}`} />
-            <span className={`eyebrow mt-2 hidden md:block ${i === step ? "!text-foreground" : ""}`}>{s}</span>
+            <span className={`eyebrow mt-2 hidden lg:block ${i === step ? "!text-foreground" : ""}`}>{s}</span>
           </button>
         ))}
       </div>
-      <p className="eyebrow mt-3 md:hidden">Step {step + 1} / {STEPS.length} · {STEPS[step]}</p>
+      <p className="eyebrow mt-3 lg:hidden">Step {step + 1} / {STEPS.length} · {STEPS[step]}</p>
 
       <div key={step} className="reveal mt-12 space-y-10">
         {step === 0 && (
           <>
             <Group title="Your design">
-              <label className="block">
+              <label className="block min-w-0">
                 <span className="eyebrow">Design *</span>
                 <select className="field" value={designId} onChange={(e) => setDesignId(e.target.value)}>
                   <option value="">Select a design</option>
@@ -145,7 +145,7 @@ function CreatePage() {
               {design && (
                 <div className="flex items-center gap-4 border border-border p-3">
                   <img src={design.thumbnail} alt="" width={64} height={85} className="h-20 w-16 object-cover" />
-                  <div className="flex-1">
+                  <div className="min-w-0 flex-1">
                     <p className="font-display text-2xl">{design.name}</p>
                     <p className="eyebrow">{design.category}</p>
                   </div>
@@ -196,7 +196,7 @@ function CreatePage() {
                   <span className="font-display text-xl italic text-gold">Event {i + 1}</span>
                   <button type="button" className="eyebrow hover:text-destructive" onClick={() => setEvents(events.filter((_, j) => j !== i))}>Remove</button>
                 </div>
-                <label className="block">
+                <label className="block min-w-0">
                   <span className="eyebrow">Event</span>
                   <input list="event-names" className="field" value={ev.name} onChange={(e) => setEvents(events.map((x, j) => j === i ? { ...x, name: e.target.value } : x))} placeholder="Mehndi, Nikah, Reception…" />
                 </label>
@@ -233,7 +233,7 @@ function CreatePage() {
               <div>
                 <span className="eyebrow">Your WhatsApp number *</span>
                 <div className="flex gap-3">
-                  <select className="field !w-36 shrink-0" value={dial} onChange={(e) => setDial(e.target.value)} aria-label="Country">
+                  <select className="field !w-24 shrink-0 sm:!w-36" value={dial} onChange={(e) => setDial(e.target.value)} aria-label="Country">
                     {countries.map((c) => <option key={c.code} value={c.code}>{c.code} +{c.dial}</option>)}
                   </select>
                   <input className="field" type="tel" inputMode="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="50 123 4567" aria-label="WhatsApp number" />
@@ -266,9 +266,9 @@ function CreatePage() {
                 ["City", venue.city || "—"],
                 ["WhatsApp", normalized],
               ].map(([k, v]) => (
-                <div key={k} className="flex justify-between gap-6 py-3.5">
+                <div key={k} className="flex flex-col gap-2 py-3.5 sm:flex-row sm:justify-between sm:gap-6">
                   <dt className="eyebrow">{k}</dt>
-                  <dd className="text-right font-display text-xl">{v}</dd>
+                  <dd className="min-w-0 font-display text-xl sm:text-right">{v}</dd>
                 </div>
               ))}
             </dl>
@@ -279,7 +279,7 @@ function CreatePage() {
 
       {error && <p role="alert" className="mt-8 border-l-2 border-destructive pl-4 text-sm text-destructive">{error}</p>}
 
-      <div className="mt-12 flex items-center justify-between gap-4">
+      <div className="mt-12 flex flex-wrap items-center justify-between gap-4">
         {step > 0 ? <button type="button" onClick={() => { setError(null); setStep(step - 1); }} className="link-line">Back</button> : <span />}
         {step < STEPS.length - 1
           ? <button type="button" onClick={next} className="btn-primary">Continue</button>
@@ -319,7 +319,7 @@ function Row({ children }: { children: ReactNode }) {
 }
 function Field({ label, value, onChange, type = "text", placeholder }: { label: string; value: string; onChange: (v: string) => void; type?: string; placeholder?: string }) {
   return (
-    <label className="block">
+    <label className="block min-w-0">
       <span className="eyebrow">{label}</span>
       <input className="field" type={type} value={value} placeholder={placeholder} onChange={(e) => onChange(e.target.value)} />
     </label>

@@ -40,10 +40,10 @@ function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="mx-auto grid max-w-7xl gap-12 px-5 pb-20 pt-12 md:grid-cols-12 md:px-10 md:pt-20">
-        <div className="md:col-span-6 md:pt-10">
+      <section className="mx-auto grid max-w-7xl gap-12 px-5 pb-20 pt-12 md:px-10 md:pt-20 lg:grid-cols-12">
+        <div className="min-w-0 lg:col-span-6 lg:pt-10">
           <p className="eyebrow reveal">Digital wedding invitations</p>
-          <h1 className="reveal mt-6 text-[3.1rem] leading-[0.98] md:text-[5.5rem]" style={{ animationDelay: "0.1s" }}>
+          <h1 className="reveal mt-6 text-[clamp(2.6rem,7vw,5.5rem)] leading-[0.98]" style={{ animationDelay: "0.1s" }}>
             Your wedding deserves <em className="text-gold">more</em> than a card.
           </h1>
           <p className="reveal mt-7 max-w-md text-base leading-relaxed text-muted-foreground" style={{ animationDelay: "0.2s" }}>
@@ -54,7 +54,7 @@ function Home() {
             <Link to="/create" className="btn-ghost">Create my invitation</Link>
           </div>
         </div>
-        <div className="relative h-[460px] md:col-span-6 md:h-[620px]">
+        <div className="relative mx-auto aspect-[6/7] w-full max-w-xl lg:col-span-6 lg:max-w-none">
           <img src={t2} alt="Cinematic Vows invitation" width={768} height={1024} className="img-reveal absolute left-[4%] top-[8%] w-[48%] shadow-2xl" />
           <img src={t1} alt="Antique Bloom invitation" width={768} height={1024} className="img-reveal absolute right-[2%] top-0 w-[46%] shadow-xl" style={{ animationDelay: "0.25s" }} />
           <img src={t3} alt="Gilded Envelope invitation" width={768} height={1024} className="img-reveal absolute bottom-0 left-[30%] w-[42%] shadow-2xl" style={{ animationDelay: "0.5s" }} />

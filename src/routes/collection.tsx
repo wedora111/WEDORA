@@ -31,7 +31,7 @@ function Collection() {
       <h1 className="reveal mt-4 max-w-3xl text-5xl leading-[1] md:text-7xl">Choose the invitation that feels like your story.</h1>
       <div className="-mx-5 mt-10 flex gap-6 overflow-x-auto border-b border-border px-5 pb-3 md:mx-0 md:px-0">
         {categories.map((c) => (
-          <button key={c} onClick={() => setCat(c)} className={`eyebrow shrink-0 pb-1 transition-colors ${cat === c ? "!text-foreground border-b border-gold" : "hover:text-foreground"}`}>
+          <button key={c} onClick={() => setCat(c)} aria-pressed={cat === c} className={`eyebrow min-h-11 shrink-0 pb-1 transition-colors ${cat === c ? "!text-foreground border-b border-gold" : "hover:text-foreground"}`}>
             {c}
           </button>
         ))}

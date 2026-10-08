@@ -3,11 +3,11 @@ import { Link } from "@tanstack/react-router";
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-10">
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-5 py-3 sm:flex-nowrap md:px-10">
         <Link to="/" className="font-display text-2xl tracking-[0.3em]">WEDORA</Link>
-        <nav className="flex items-center gap-5 md:gap-8">
-          <Link to="/collection" className="eyebrow hover:text-foreground" activeProps={{ className: "text-foreground" }}>Collection</Link>
-          <Link to="/create" className="eyebrow hidden hover:text-foreground sm:inline" activeProps={{ className: "text-foreground" }}>Create</Link>
+        <nav aria-label="Main navigation" className="flex w-full items-center justify-between gap-3 sm:w-auto sm:justify-start md:gap-8">
+          <Link to="/collection" className="eyebrow inline-flex min-h-11 items-center hover:text-foreground" activeProps={{ className: "text-foreground" }}>Collection</Link>
+          <Link to="/create" className="eyebrow hidden min-h-11 items-center hover:text-foreground sm:inline-flex" activeProps={{ className: "text-foreground" }}>Create</Link>
           <Link to="/create" className="btn-primary !px-4 !py-2.5">Free preview</Link>
         </nav>
       </div>
