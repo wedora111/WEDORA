@@ -19,6 +19,18 @@ export function Footer() {
   return (
     <footer className="bg-ink text-ink-foreground">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-3 md:px-10">
+        {/* <div>
+          <p className="font-display text-3xl tracking-[0.3em]">WEDORA</p>
+          <p className="mt-4 max-w-xs text-sm opacity-70">
+            Interactive digital wedding invitations, personalized for your celebration.
+          </p>
+          <a
+            href="mailto:wedora111@gmail.com"
+            className="mt-3 block text-sm opacity-70 hover:opacity-100"
+          >
+            wedora111@gmail.com
+          </a>
+        </div> */}
         <div>
           <p className="font-display text-3xl tracking-[0.3em]">WEDORA</p>
           <p className="mt-4 max-w-xs text-sm opacity-70">Interactive digital wedding invitations, personalized for your celebration.</p>
@@ -26,6 +38,12 @@ export function Footer() {
         <div className="space-y-3 text-sm opacity-80">
           <Link to="/collection" className="block hover:opacity-100">The Collection</Link>
           <Link to="/create" className="block hover:opacity-100">Request a free preview</Link>
+          <a
+            href="mailto:wedora111@gmail.com"
+            className="mt-3 block text-sm opacity-70 hover:opacity-100"
+          >
+            wedora111@gmail.com
+          </a>
         </div>
         <p className="text-xs tracking-[0.2em] uppercase opacity-60 md:text-right">© {new Date().getFullYear()} WEDORA · Made for every celebration</p>
       </div>
